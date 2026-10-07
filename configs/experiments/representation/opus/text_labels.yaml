@@ -1,0 +1,53 @@
+# Claude Opus 5, all eight tools; display: the reference labels given as text instead of drawn.
+
+gpus: [0, 1, 2, 3, 4, 5, 6, 7]     # one shard per GPU (navgpt launch)
+
+dataset:
+  name: r2r
+  split: opennav100
+  episodes: all
+  episodes_file: opennav100        # key under `episodes` in configs/paths.yaml
+  ground_truth_split: val_unseen   # dense ground truth for nDTW
+
+environment:
+  url: http://127.0.0.1:9200
+  max_steps: 500
+  forward_view_px: 512
+  panorama_view_px: 512            # sharper views for the Planner
+  turn_angle_deg: 15
+  step_size_m: 0.25
+  allow_sliding: true
+
+vla:
+  url: http://127.0.0.1:8000
+  checkpoint: navgpt3-8b           # key under `checkpoints` in configs/paths.yaml
+  visual_token_budget: 3072
+  frame_cache: precompute
+  seed: 20260910                   # per-episode VLA seed base (study displays)
+
+planner:
+  runtime: claude                  # codex (GPT models) or claude (Claude models)
+  model: claude-opus-5
+  effort: high                     # reasoning effort
+  max_turns: 200                   # Planner responses per episode
+  episode_timeout_s: 2400
+  max_budget_usd: 5.0
+  tools:
+    - observe_forward
+    - observe_panorama
+    - observe_map
+    - navigate_by_instruction
+    - navigate_relative
+    - navigate_to_node
+    - annotate_node
+    - terminate_episode
+
+harness:
+  interface: text_labels
+  review_every: 0                  # VLA steps between Planner reviews; 0: only when the VLA stops
+  route_finding: true              # navigate_relative follows the walkable route
+  vla_steps_per_call: 200          # step cap on one navigate_by_instruction call
+
+output:
+  dir: outputs
+  save_frames: true

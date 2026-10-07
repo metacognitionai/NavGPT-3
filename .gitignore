@@ -1,0 +1,17 @@
+# Machine-specific paths, copied from configs/paths.example.yaml
+configs/paths.yaml
+.env
+.env.*
+.DS_Store
+
+outputs/*
+!outputs/.gitkeep
+.venv/
+.envs/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/

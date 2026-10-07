@@ -1,0 +1,27 @@
+# NavGPT3-8B alone on R2R-CE val_unseen.
+
+gpus: [0, 1, 2, 3, 4, 5, 6, 7]     # one shard per GPU (navgpt launch)
+
+dataset:
+  name: r2r
+  split: val_unseen
+  episodes: all
+
+environment:
+  url: http://127.0.0.1:9200
+  max_steps: 500
+  forward_view_px: 512
+  panorama_view_px: 400            # the VLA's training resolution
+  turn_angle_deg: 30               # as in VLNCE-EVAL; used only by blocked-step turns
+  step_size_m: 0.25
+  allow_sliding: true
+
+vla:
+  url: http://127.0.0.1:8000
+  checkpoint: navgpt3-8b           # key under `checkpoints` in configs/paths.yaml
+  visual_token_budget: 3072
+  frame_cache: precompute
+
+output:
+  dir: outputs
+  save_frames: false

@@ -1,0 +1,25 @@
+# Machine-specific paths. Copy to configs/paths.yaml (gitignored) and fill in.
+# Experiment configs refer to these entries by key.
+
+data:
+  r2r: /path/to/R2R_VLNCE_v1-3_preprocessed   # holds val_unseen/val_unseen.json.gz
+  rxr: /path/to/RxR_VLNCE_v0                  # holds val_unseen/val_unseen_guide.json.gz
+  scenes: /path/to/scene-datasets             # parent of mp3d/<scan>/<scan>.glb
+
+# Curated episode files, referenced as dataset.episodes_file.
+episodes:
+  opennav100: /path/to/OpenNav_R2R-CE_100_bertidx.json
+
+# Downloaded NavGPT3 checkpoint directories, referenced as vla.checkpoint.
+checkpoints:
+  navgpt3-4b: /path/to/NavGPT3-4B
+  navgpt3-8b: /path/to/NavGPT3-8B
+
+# Optional: Codex CLI used by the Codex runtime, when newer than the SDK's bundled one.
+# codex_bin: /path/to/codex
+
+# Optional: the Python that `navgpt launch` uses for each service (defaults shown,
+# relative to the repository root).
+# python:
+#   environment: .envs/habitat/bin/python
+#   vla: .envs/vla/bin/python

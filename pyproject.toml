@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "navgpt"
+version = "0.3.0"
+description = "NavGPT-3 simulator harness with Planner, Environment, and NavGPT3 VLA"
+readme = "README.md"
+license = "Apache-2.0 AND MIT"
+license-files = ["LICENSE", "NOTICE", "navgpt/vla/LICENSE"]
+requires-python = ">=3.10"
+dependencies = [
+    "claude-agent-sdk>=0.2.139",
+    "mcp>=1.29.0,<2.0.0",
+    "openai-codex==0.147.0",
+    "tomli>=2; python_version < '3.11'",
+    "pillow>=10.0.0",
+    "pyyaml>=6.0",
+    "requests>=2.28.0",
+]
+
+# One source distribution, three runtime environments: these are the Planner's
+# dependencies; the Environment uses the Habitat environment and the VLA uses
+# requirements-vla.txt.
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["navgpt*"]
+
+[tool.setuptools.package-data]
+"navgpt.vla" = ["LICENSE"]
+
+[project.scripts]
+navgpt = "navgpt.cli:main"

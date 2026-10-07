@@ -1,0 +1,18 @@
+NavGPT-3 simulator harness
+Copyright 2026 The NavGPT-3 Authors
+
+The project source is distributed under the Apache License, Version 2.0, except
+where a component carries its own license.
+
+The NavGPT VLA service files navgpt/vla/api.py, navgpt/vla/navigation.py and
+navgpt/vla/images.py are derived from VLNCE-EVAL, Copyright (c) 2023 EPIC Lab,
+and remain under the MIT license in navgpt/vla/LICENSE.
+
+The NavGPT3 model and processor classes in navgpt/vla/runtime/models/ extend the
+Qwen3-VL and Qwen2-VL implementations in Hugging Face Transformers, Copyright
+2025 The Qwen Team and The HuggingFace Inc. team, licensed under the Apache
+License, Version 2.0. They add the navigation action head, per-image visual
+token allocation, and the vision position-embedding arithmetic used in training.
+
+Model checkpoints, datasets, simulator assets, and third-party dependencies
+are distributed separately and are not licensed by this source-code license.

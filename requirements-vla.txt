@@ -1,0 +1,16 @@
+# Install an appropriate CUDA build of PyTorch first. The versions below match
+# the tested runtime. NavGPT3 subclasses the Transformers Qwen3-VL modules, so
+# Transformers is pinned to the version it was verified against. FlashAttention
+# 2 (flash-attn 2.7.4) is used when installed; otherwise SDPA.
+torch>=2.6.0,<2.7
+torchvision>=0.21.0,<0.22
+transformers==5.18.0
+accelerate>=1.7.0
+flask>=3.1.0,<3.2
+numpy>=2.0.0,<3.0
+opencv-python>=4.8.0
+numpy-quaternion>=2024.0.0
+pillow>=10.0.0
+pyyaml>=6.0
+safetensors>=0.8.0
+sentencepiece>=0.2.0
