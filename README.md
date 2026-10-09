@@ -30,7 +30,7 @@
 <div>
     <a href='https://github.com/metacognitionai/NavGPT-3' target='_blank'><img alt="Static Badge" src="https://img.shields.io/badge/NavGPT-v0.3-blue"></a>
     <a href='https://metacognitionai.github.io/NavGPT3/' target='_blank'><img alt="Static Badge" src="https://img.shields.io/badge/Project-Page-green"></a>
-    <img alt="Static Badge" src="https://img.shields.io/badge/Paper-Coming_Soon-red">
+    <a href='https://arxiv.org/abs/2610.10787' target='_blank'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
     <a href='https://huggingface.co/Metacognition-AI' target='_blank'><img alt="Static Badge" src="https://img.shields.io/badge/Hugging_Face-Models-FFD21E"></a>
     <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-yellow.svg" alt="License: Apache 2.0"></a>
     <a href="https://github.com/metacognitionai/zeos"><img alt="Static Badge" src="https://img.shields.io/badge/Runtime-ZEOS-blue"></a>
@@ -470,6 +470,7 @@ If you find this work helpful, please consider citing:
 @article{zhou2026navgpt3,
   title={NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime},
   author={Zhou, Gengze and Hong, Yicong and Zhang, Jiazhao and Zhao, Xunyi and Zhou, Jian and Lei, Zixing and Wang, Zun and Zhao, Chongyang and Chen, Xionghui and Gould, Stephen and van den Hengel, Anton and Wu, Qi},
+  journal={arXiv preprint arXiv:2610.10787},
   year={2026}
 }
 
