@@ -458,7 +458,7 @@ They run with the same `navgpt launch` command. The [usage reference](docs/USAGE
 ## Acknowledgements
 We extend our gratitude to Matterport3D for their valuable contributions to the open-source platform and community.
 
-We also acknowledge the significant benefits of using [Habitat](https://github.com/facebookresearch/habitat-sim), [VLN-CE](https://github.com/jacobkrantz/VLN-CE), and [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) in this work. Our thanks go out to the creators of these outstanding projects. The Planner builds on AgentCanvas's evaluation and MCP patterns, and the VLA service includes work derived from VLNCE-EVAL; existing upstream source notices are retained.
+We also acknowledge the significant benefits of using [Habitat](https://github.com/facebookresearch/habitat-sim), [VLN-CE](https://github.com/jacobkrantz/VLN-CE), [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL), [AgentCanvas](https://github.com/jianzhou0420/AgentCanvas), [NaVid-VLN-CE](https://github.com/jzhzhang/NaVid-VLN-CE), and [Open-Nav](https://github.com/YanyuanQiao/Open-Nav) in this work. Our thanks go out to the creators of these outstanding projects. The Planner builds on AgentCanvas's evaluation and MCP patterns, the VLA service includes work derived from VLNCE-EVAL, our evaluator built on NaVid-VLN-CE, and the ablations use the Open-Nav R2R-CE subset; existing upstream source notices are retained.
 
 The source code is released under the [Apache 2.0 license](LICENSE), subject to the component licenses and attribution in [NOTICE](NOTICE), including the [VLA service's MIT license](navgpt/vla/LICENSE). Model weights and datasets have separate licensing terms; the source license does not grant rights to them.
 

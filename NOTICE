@@ -5,8 +5,9 @@ The project source is distributed under the Apache License, Version 2.0, except
 where a component carries its own license.
 
 The NavGPT VLA service files navgpt/vla/api.py, navgpt/vla/navigation.py and
-navgpt/vla/images.py are derived from VLNCE-EVAL, Copyright (c) 2023 EPIC Lab,
-and remain under the MIT license in navgpt/vla/LICENSE.
+navgpt/vla/images.py are derived from VLNCE-EVAL, built on NaVid-VLN-CE
+(https://github.com/jzhzhang/NaVid-VLN-CE), Copyright (c) 2023 EPIC Lab, and
+remain under the MIT license in navgpt/vla/LICENSE.
 
 The NavGPT3 model and processor classes in navgpt/vla/runtime/models/ extend the
 Qwen3-VL and Qwen2-VL implementations in Hugging Face Transformers, Copyright

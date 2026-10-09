@@ -410,7 +410,8 @@ distributed separately under their own terms; the source license does not grant
 rights to them.
 
 The Planner's evaluation loop, Claude adapter, and MCP tool-server pattern build on
-AgentCanvas. The NavGPT VLA service files `api.py`, `navigation.py`, and `images.py`
-are derived from VLNCE-EVAL by EPIC Lab and keep its MIT license in
+[AgentCanvas](https://github.com/jianzhou0420/AgentCanvas). The NavGPT VLA service files `api.py`, `navigation.py`, and `images.py`
+are derived from VLNCE-EVAL, built on EPIC Lab's
+[NaVid-VLN-CE](https://github.com/jzhzhang/NaVid-VLN-CE), and keep its MIT license in
 [navgpt/vla/LICENSE](../navgpt/vla/LICENSE). The NavGPT3 model and processor classes
 extend the Apache-2.0 Qwen3-VL implementation in Hugging Face Transformers.
