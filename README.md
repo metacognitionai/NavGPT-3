@@ -43,7 +43,7 @@
 
 
 ## Abstract
-Language models trained with long-horizon agentic reinforcement learning can generalize knowledge through reasoning, express precise actions, and pursue goals over many steps, raising the ceiling on what an embodied agent can understand and decide. Physical interaction, however, remains the domain of action policies, which provide dense, low-latency control. We present NavGPT-3, a harness that connects the two models, with an OS-like runtime built above it: reasoning, acting, and monitoring run as threads with their own context, tools, and permissions, while the runtime schedules them and decides which thread controls the robot's motion, so that the robot can react to sudden real-world events through interruption and thread switching. Beneath it, our action policy NavGPT VLA, trained on 19.28M examples, allocates visual tokens using codec allocation, in proportion to scene change; its 8B model alone reaches 74.51 SR on R2R-CE and leads RxR-CE with 78.19 SR. With the complete harness, NavGPT-3 sets the state of the art on R2R-CE (81.51 SR) and, for the first time, brings an autonomous agent to human level: on RxR-CE it matches human followers in success (90.43 vs. 90.4 SR) and path fidelity (78.47 vs. 77.7 nDTW) at 1 min 22 s per episode, versus roughly 3 min for a human. We comprehensively ablate the harness design and the interaction between the two models, showing how tools and the action policy shape the path from language-model reasoning to physical control: when NavGPT VLA executes the route, the reasoning loop shortens and the system's minimum reaction time falls from 3–19 s per language-model decision to 0.5–1 s per action-policy step (1–2 Hz). These results show that designing this embodied interface is central to connecting frontier language-model intelligence with low-level physical control.
+Language models trained with long-horizon agentic reinforcement learning can generalize knowledge through reasoning, express precise actions, and pursue goals over many steps, raising the ceiling on what an embodied agent can understand and decide. Physical interaction, however, remains the domain of action policies, which provide dense, low-latency control. We present NavGPT-3, a harness that connects the two models, with an OS-like runtime built above it: reasoning, acting, and monitoring run as threads with their own context, tools, and permissions, while the runtime schedules them and decides which thread controls the robot's motion, so that the robot can react to sudden real-world events through interruption and thread switching. Beneath it, our action policy NavGPT VLA, trained on 19.28M examples, allocates visual tokens using codec allocation, in proportion to scene change; its 8B model alone reaches 76.94 SR on R2R-CE and leads RxR-CE with 82.39 SR. With the complete harness, NavGPT-3 sets the state of the art on R2R-CE (81.51 SR) and, for the first time, brings an autonomous agent to human level: on RxR-CE it matches human followers in success (90.43 vs. 90.4 SR) and path fidelity (78.47 vs. 77.7 nDTW) at 1 min 22 s per episode, versus roughly 3 min for a human. We comprehensively ablate the harness design and the interaction between the two models, showing how tools and the action policy shape the path from language-model reasoning to physical control: when NavGPT VLA executes the route, the reasoning loop shortens and the system's minimum reaction time falls from 3–19 s per language-model decision to 0.5–1 s per action-policy step (1–2 Hz). These results show that designing this embodied interface is central to connecting frontier language-model intelligence with low-level physical control.
 
 ## Method
 ![](assets/teaser.png)
@@ -383,10 +383,10 @@ Each result has a config under [`configs/experiments/vln/`](configs/experiments/
         <td></td><td></td><td>NE↓</td><td>OSR↑</td><td>SR↑</td><td>SPL↑</td><td>NE↓</td><td>nDTW↑</td><td>SR↑</td><td>SPL↑</td>
     </tr>
     <tr align="center">
-        <td>NavGPT VLA 4B</td><td><code>vla_4b_{r2r,rxr}</code></td><td>3.41</td><td>79.91</td><td>72.54</td><td>67.19</td><td>3.35</td><td>73.33</td><td>76.77</td><td>67.77</td>
+        <td>NavGPT VLA 4B</td><td><code>vla_4b_{r2r,rxr}</code></td><td>3.32</td><td>81.67</td><td>74.33</td><td>68.13</td><td>2.87</td><td>75.79</td><td>81.41</td><td>69.86</td>
     </tr>
     <tr align="center">
-        <td>NavGPT VLA 8B</td><td><code>vla_8b_{r2r,rxr}</code></td><td>3.29</td><td>80.19</td><td>74.51</td><td>68.54</td><td>3.05</td><td>74.85</td><td>78.19</td><td>68.98</td>
+        <td>NavGPT VLA 8B</td><td><code>vla_8b_{r2r,rxr}</code></td><td>2.97</td><td>82.49</td><td>76.94</td><td>70.61</td><td>2.65</td><td>76.74</td><td>82.39</td><td>70.56</td>
     </tr>
     <tr align="center">
         <td>NavGPT-3 (Claude Opus 5)</td><td><code>navgpt3_opus_{r2r,rxr}</code></td><td>2.77</td><td>84.07</td><td>79.01</td><td>70.16</td><td>2.27</td><td>75.09</td><td>84.80</td><td>69.85</td>
@@ -395,6 +395,8 @@ Each result has a config under [`configs/experiments/vln/`](configs/experiments/
         <td>NavGPT-3 (GPT-6 Astra)</td><td><code>navgpt3_astra_{r2r,rxr}</code></td><td>2.18</td><td>86.99</td><td>81.51</td><td>70.42</td><td>1.56</td><td>78.47</td><td>90.43</td><td>74.31</td>
     </tr>
 </table>
+
+Full evaluation trajectories and per-episode results are available in the [evaluation files](https://huggingface.co/datasets/ZGZzz/NavGPT-3-website-media/tree/main/evaluation).
 
 Both NavGPT-3 systems use the 8B VLA. One command runs an experiment on the GPUs listed in its config:
 
