@@ -31,6 +31,7 @@
     <a href='https://github.com/metacognitionai/NavGPT-3' target='_blank'><img alt="Static Badge" src="https://img.shields.io/badge/NavGPT-v0.3-blue"></a>
     <a href='https://metacognitionai.github.io/NavGPT3/' target='_blank'><img alt="Static Badge" src="https://img.shields.io/badge/Project-Page-green"></a>
     <a href='https://arxiv.org/abs/2610.10787' target='_blank'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
+    <a href="https://youtu.be/pkeGaOxhS3A" target="_blank"><img alt="Watch the demo on YouTube" src="https://img.shields.io/badge/YouTube-Demo-FF0000?logo=youtube&amp;logoColor=white"></a>
     <a href='https://huggingface.co/Metacognition-AI' target='_blank'><img alt="Static Badge" src="https://img.shields.io/badge/Hugging_Face-Models-FFD21E"></a>
     <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-yellow.svg" alt="License: Apache 2.0"></a>
     <a href="https://github.com/metacognitionai/zeos"><img alt="Static Badge" src="https://img.shields.io/badge/Runtime-ZEOS-blue"></a>
@@ -40,8 +41,6 @@
 </div>
 
 https://github.com/user-attachments/assets/72452e75-c86b-432c-80f1-d7db068e60fd
-
-<p><a href="https://youtu.be/pkeGaOxhS3A">Watch on YouTube</a></p>
 
 </div>
 
