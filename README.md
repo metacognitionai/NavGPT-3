@@ -2,10 +2,6 @@
 
 <h1>NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime</h1>
 
-https://github.com/user-attachments/assets/50026bb5-4bb7-4e0d-83b9-1a3dfd554a0e
-
-<p><a href="https://youtu.be/pkeGaOxhS3A">Watch on YouTube</a></p>
-
 <div>
     <a href='https://gengzezhou.github.io' target='_blank'>Gengze Zhou<sup>1,2</sup></a>;
     <a href='https://yiconghong.github.io' target='_blank'>Yicong Hong<sup>4</sup></a>;
@@ -42,6 +38,10 @@ https://github.com/user-attachments/assets/50026bb5-4bb7-4e0d-83b9-1a3dfd554a0e
     <a href="https://developers.openai.com/codex"><img alt="Static Badge" src="https://img.shields.io/badge/OpenAI-Codex_SDK-412991"></a>
     <a href="https://github.com/facebookresearch/habitat-sim"><img alt="Static Badge" src="https://img.shields.io/badge/Habitat--Sim-0.1.7-blue"></a>
 </div>
+
+https://github.com/user-attachments/assets/72452e75-c86b-432c-80f1-d7db068e60fd
+
+<p><a href="https://youtu.be/pkeGaOxhS3A">Watch on YouTube</a></p>
 
 </div>
 
