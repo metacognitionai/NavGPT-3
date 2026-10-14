@@ -2,6 +2,10 @@
 
 <h1>NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime</h1>
 
+https://github.com/user-attachments/assets/50026bb5-4bb7-4e0d-83b9-1a3dfd554a0e
+
+<p><a href="https://youtu.be/pkeGaOxhS3A">Watch on YouTube</a></p>
+
 <div>
     <a href='https://gengzezhou.github.io' target='_blank'>Gengze Zhou<sup>1,2</sup></a>;
     <a href='https://yiconghong.github.io' target='_blank'>Yicong Hong<sup>4</sup></a>;
